@@ -1,3 +1,5 @@
+
+
 function onClickButton() {
 	// document - index.html
 	// getElementById - обратится к элементу страницы по ID элемента (например 'test')
@@ -11,17 +13,28 @@ function onClickButton() {
 
 
 	var str = first + ':' + second;
+    var str2 = '2025-12-31';
 
+	var test = str2.split('-'); // [2025,12,31]
+	
+	var itog='';
 
-	var test = str.split(':'); // [434,343]
+	for (var n = 0; n < test.length; n++) {
+//		itog =  itog + test[n]+ '/'; 
 
-
-	if(test[0]>test[1]){
-		element.textContent = test[0];
-	} else {
-	 	element.textContent = test[1];
+		if(n === (test.length-1)) {
+			itog=itog+test[n];
+		} else {
+			itog =  itog + test[n]+ '/'; 
+		}
 	}
+
+	element.textContent = itog;
+	// i++ = i + 1
+
 	// вставляет текст в элемент
 	// element.textContent =first + ' ' + second;
 
 }
+// onClickButton();
+
